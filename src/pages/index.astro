@@ -1,47 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Prompt from "../components/Prompt.astro";
+import Centerpiece from "../components/Centerpiece.astro";
+import Icons from "../components/Icons.astro";
 ---
 
 <Layout>
-  <main class="bg-zinc-900 h-screen text-white flex justify-center items-center">
-    <div class="artie fixed top-4 left-6 text-xl font-bold text-slate-300">
-      &gt; arti<span class="text-pink-400">3</span>
-    </div>
-    <div>
-      <p class="font-bold dark:text-white text-5xl">
-        Hiya! I'm <span class="text-transparent bg-clip-text from-pink-400 to-purple-600 bg-gradient-to-r">Artur</span> 👋
-      </p>
-    </div>
+  <main class="bg-zinc-900 h-screen text-white flex flex-col justify-center items-center">
+    <Prompt />
+	<Centerpiece />
+	<Icons />
   </main>
 </Layout>
-
-<style>
-	.artie {
-		font-family: "JetBrains Mono", monospace;
-	}
-
-  .artie::after {
-    content: "";
-    position: absolute;
-    top: 2.4px;
-    right: -8px;
-    display: inline-block;
-    background-color: #606060;
-    vertical-align: top;
-    width: 6px;
-    height: 22px;
-    animation: blink 1s step-end infinite;
-  }
-
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-</style>

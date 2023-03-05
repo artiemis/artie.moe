@@ -1,0 +1,31 @@
+<div class="artie font-mono fixed top-4 left-6 text-xl font-bold text-slate-300">
+  &gt; arti<span class="text-pink-400">3</span>
+</div>
+
+<style>  
+    .artie::after {
+      content: "";
+      position: absolute;
+      top: 2.4px;
+      right: -8px;
+      display: inline-block;
+      background-color: #606060;
+      vertical-align: top;
+      width: 6px;
+      height: 22px;
+      animation: blink 1s step-end infinite;
+    }
+  
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  

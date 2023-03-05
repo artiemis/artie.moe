@@ -1,0 +1,29 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="flex gap-x-2 mt-7">
+  <a href="https://github.com/artiemis" target="_blank">
+    <Icon name="mdi:github" />
+  </a>
+  <a href="https://discord.com/users/134306884617371648" target="_blank">
+    <Icon name="mdi:discord" />
+  </a>
+  <a href="mailto:hi@arti3.dev" target="_blank">
+    <Icon name="mdi:email" />
+  </a>
+  <a href="https://anilist.co/user/Artiem/" target="_blank">
+    <Icon name="simple-icons:anilist" />
+  </a>
+</div>
+
+<style>
+  [astro-icon] {
+    width: 2rem;
+    transition: 0.4s ease-out;
+  }
+
+  [astro-icon]:hover {
+    transform: rotateZ(360deg);
+  }
+</style>
