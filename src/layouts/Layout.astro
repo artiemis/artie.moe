@@ -1,3 +1,11 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +30,7 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
 
-    <title>artie</title>
+    <title>{title}</title>
   </head>
   <body class="bg-zinc-900 h-screen text-white flex flex-col justify-center items-center">
     <slot />
