@@ -1,6 +1,32 @@
-<svg class="fixed xl:-bottom-64 -bottom-72 xl:right-20 right-11 xl:w-48 w-28 fill-pink-400 opacity-70 -z-10" fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 490 490" xml:space="preserve">
-<path id="XMLID_25_" d="M316.554,108.336c4.553,6.922,2.629,16.223-4.296,20.774c-3.44,2.261-6.677,4.928-9.621,7.929
+<script lang="ts">
+  let heart: SVGElement;
+  let colors = ["#f472b6", "#c084fc", "#818cf8", "#38bdf8", "#2dd4bf", "#4ade80", "#facc15", "#fb923c"];
+  let currentColor = "#f472b6";
+
+  function handleClick() {
+    let choice = currentColor;
+    while (choice === currentColor) {
+      choice = colors[Math.floor(Math.random() * colors.length)];
+    }
+    heart.style.fill = currentColor = choice;
+  }
+</script>
+
+<svg
+  bind:this={heart}
+  on:click={handleClick}
+  on:keydown={handleClick}
+  class="hover:opacity-100 transition duration-50 cursor-pointer fixed xl:bottom-10 bottom-7 xl:right-20 right-10 xl:w-48 w-24 fill-pink-400 opacity-70"
+  fill="#000000"
+  width="800px"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 490 490"
+  xml:space="preserve"
+>
+  <path
+    d="M316.554,108.336c4.553,6.922,2.629,16.223-4.296,20.774c-3.44,2.261-6.677,4.928-9.621,7.929
 	c-2.938,2.995-6.825,4.497-10.715,4.497c-3.791,0-7.585-1.427-10.506-4.291c-5.917-5.801-6.009-15.298-0.207-21.212
 	c4.439-4.524,9.338-8.559,14.562-11.992C302.698,99.491,312.002,101.414,316.554,108.336z M447.022,285.869
 	c-1.506,1.536-148.839,151.704-148.839,151.704C283.994,452.035,265.106,460,245,460s-38.994-7.965-53.183-22.427L42.978,285.869
@@ -14,23 +40,24 @@
 	c-7.746-2.939-16.413,0.953-19.355,8.698c-2.942,7.744,0.953,16.407,8.701,19.348c7.645,2.902,14.521,7.431,20.436,13.459
 	c23.211,23.658,23.211,62.153,0,85.811l-52.648,53.661c-5.803,5.915-5.711,15.412,0.206,21.212
 	c2.921,2.863,6.714,4.291,10.506,4.291c3.889,0,7.776-1.502,10.714-4.497l52.648-53.661
-	C438.744,208.616,438.744,151.275,404.169,116.034z"/>
+	C438.744,208.616,438.744,151.275,404.169,116.034z"
+  />
 </svg>
 
 <style>
-    svg {
-        animation: float 3s ease-in-out infinite;
-    }
+  svg {
+    animation: float 3s ease-in-out infinite;
+  }
 
-    @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-30px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
-}
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-30px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
 </style>

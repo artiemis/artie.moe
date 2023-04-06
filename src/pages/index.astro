@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Prompt from "../components/Prompt.astro";
 import Centerpiece from "../components/Centerpiece.astro";
 import Icons from "../components/Icons.astro";
-import Heart from "../components/Heart.astro";
+import Heart from "../components/Heart.svelte";
 import Stripe from "../components/Stripe.astro";
 ---
 
@@ -12,5 +12,5 @@ import Stripe from "../components/Stripe.astro";
   <Prompt />
 	<Centerpiece />
 	<Icons />
-  <Heart />
+  <Heart client:load />
 </Layout>
