@@ -1,7 +1,7 @@
 <script lang="ts">
   let heart: SVGElement;
-  let colors = ["#f472b6", "#c084fc", "#818cf8", "#38bdf8", "#2dd4bf", "#4ade80", "#facc15", "#fb923c"];
-  let currentColor = "#f472b6";
+  let colors = ["#fb7185", "#e879f9", "#a78bfa", "#60a5fa", "#22d3ee", "#34d399", "#a3e635", "#fbbf24"];
+  let currentColor = "#fb7185";
 
   function handleClick() {
     let choice = currentColor;
@@ -16,7 +16,7 @@
   bind:this={heart}
   on:click={handleClick}
   on:keydown={handleClick}
-  class="hover:opacity-100 transition duration-50 cursor-pointer fixed xl:bottom-10 bottom-7 xl:right-20 right-10 xl:w-48 w-24 fill-pink-400 opacity-70"
+  class="hover:opacity-100 transition duration-50 cursor-pointer fixed xl:bottom-10 bottom-7 xl:right-20 right-10 xl:w-48 w-24 fill-rose-400 opacity-70"
   fill="#000000"
   width="800px"
   version="1.1"
