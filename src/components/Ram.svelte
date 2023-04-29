@@ -14,7 +14,7 @@
       autoStart: true,
       backgroundAlpha: 0,
       width: 900,
-      height: 1000
+      height: 900
     });
 
     model = await Live2DModel.from("https://cdn.arti3.dev/live2d/ram/ram.model3.json");
@@ -22,7 +22,7 @@
 
     model.scale.set(0.45);
     model.x = -600
-    model.y = -40
+    model.y = -70
   });
 
   onDestroy(() => {
