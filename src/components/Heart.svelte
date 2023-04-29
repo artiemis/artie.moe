@@ -16,7 +16,7 @@
   bind:this={heart}
   on:click={handleClick}
   on:keydown={handleClick}
-  class="hover:opacity-100 transition duration-50 cursor-pointer fixed xl:bottom-10 bottom-7 xl:right-20 right-10 xl:w-48 w-24 fill-rose-400 opacity-70"
+  class="z-10 hover:opacity-100 transition duration-50 cursor-pointer fixed xl:bottom-10 bottom-7 xl:right-20 right-10 xl:w-48 w-24 fill-rose-400 opacity-70"
   fill="#000000"
   width="800px"
   version="1.1"

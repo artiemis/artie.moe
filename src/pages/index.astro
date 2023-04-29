@@ -5,7 +5,9 @@ import Centerpiece from "../components/Centerpiece.astro";
 import Icons from "../components/Icons.astro";
 import Heart from "../components/Heart.svelte";
 import Stripe from "../components/Stripe.astro";
+import Ram from "../components/Ram.svelte";
 ---
+
 
 <Layout title="artie">
   <Stripe />
@@ -13,4 +15,8 @@ import Stripe from "../components/Stripe.astro";
 	<Centerpiece />
 	<Icons />
   <Heart client:load />
+
+  <script is:inline src="/vendors/live2dcubismcore.min.js"></script>
+  <script is:inline src="/vendors/live2d.min.js"></script>
+  <Ram client:only />
 </Layout>
