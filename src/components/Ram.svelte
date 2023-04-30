@@ -14,15 +14,24 @@
       autoStart: true,
       backgroundAlpha: 0,
       width: 900,
-      height: 900
+      height: 900,
     });
 
     model = await Live2DModel.from("https://cdn.arti3.dev/live2d/ram/ram.model3.json");
     app.stage.addChild(model as unknown as PIXI.DisplayObject);
 
+    canvas.style.cursor = "pointer";
+
+    model.internalModel.motionManager.state.shouldRequestIdleMotion = () => false;
+    model.internalModel.motionManager.on("motionFinish", () => {
+      setTimeout(() => model.motion("Idle"), 2000);
+    });
+
+    model.motion("Idle");
+
     model.scale.set(0.45);
-    model.x = -600
-    model.y = -70
+    model.x = -600;
+    model.y = -70;
   });
 
   onDestroy(() => {
@@ -30,4 +39,9 @@
   });
 </script>
 
-<canvas bind:this={canvas} id="live2d" class="left-0 bottom-0 fixed lg:w-96 w-48" />
+<canvas
+  bind:this={canvas}
+  on:pointerdown={() => model.motion("Tap")}
+  id="live2d"
+  class="cursor-pointer left-0 bottom-0 fixed lg:w-96 w-48"
+/>
