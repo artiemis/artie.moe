@@ -1,6 +1,6 @@
 <script lang="ts">
   import * as PIXI from "pixi.js";
-  import { Live2DModel, MotionPriority } from "pixi-live2d-display";
+  import { Live2DModel, MotionPreloadStrategy, MotionPriority } from "pixi-live2d-display";
   import { onDestroy, onMount } from "svelte";
 
   let canvas: HTMLCanvasElement;
@@ -29,7 +29,7 @@
       height: 900,
     });
 
-    model = await Live2DModel.from(getRandomModelUrl());
+    model = await Live2DModel.from(getRandomModelUrl(), { motionPreload: MotionPreloadStrategy.NONE });
     app.stage.addChild(model as unknown as PIXI.DisplayObject);
 
     canvas.style.cursor = "pointer";
