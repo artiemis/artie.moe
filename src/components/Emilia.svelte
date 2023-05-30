@@ -8,7 +8,7 @@
   let model: Live2DModel;
 
   function getRandomModelUrl() {
-    const baseUrl = "https://cdn.artie.love/live2d/";
+    const baseUrl = "https://cdn.artie.moe/live2d/";
     const models = [
       "emilia01/ac_base_emilia01.model3.json",
       "emilia_nemaki01/ac_base_emilia_nemaki01.model3.json",
