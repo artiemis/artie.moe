@@ -1,1 +1,1 @@
-rsync -avzh --delete dist/ artem@shironeko:~/arti3.dev/public/
+rsync -avzh --delete dist/ artem@shironeko:~/artie.moe/public/
