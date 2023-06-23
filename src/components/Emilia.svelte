@@ -55,5 +55,5 @@
   bind:this={canvas}
   on:pointerdown={() => model.motion("Tap")}
   id="live2d"
-  class="cursor-pointer left-0 bottom-0 fixed lg:w-96 w-48"
+  class="cursor-pointer left-0 bottom-0 fixed lg:w-96 w-44"
 />

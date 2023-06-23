@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Prompt from "../components/Prompt.astro";
 import Centerpiece from "../components/Centerpiece.astro";
 import Icons from "../components/Icons.astro";
-import Heart from "../components/Heart.svelte";
 import Emilia from "../components/Emilia.svelte";
 ---
 
@@ -12,7 +11,6 @@ import Emilia from "../components/Emilia.svelte";
   <Prompt />
 	<Centerpiece />
 	<Icons />
-  <Heart client:load />
 
   <script is:inline src="/vendors/live2dcubismcore.min.js"></script>
   <script is:inline src="/vendors/live2d.min.js"></script>

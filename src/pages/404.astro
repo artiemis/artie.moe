@@ -1,16 +1,14 @@
 ---
-import Kotori from "../components/Kotori.astro";
 import Prompt from "../components/Prompt.astro";
 import Layout from "../layouts/Layout.astro";
 import ayuaura from "../assets/ayuaura.jpg"
 ---
 
-<Layout title="404 - artie">
+<Layout title="404">
   <Prompt />
-  <p class="font-bold lg:text-6xl text-4xl text-transparent bg-clip-text from-rose-400 to-fuchsia-600 bg-gradient-to-r">
+  <p class="font-bold lg:text-6xl text-4xl text-transparent bg-clip-text from-ctp-maroon to-ctp-red bg-gradient-to-r">
     404
   </p>
   <img src={ayuaura} alt="ayuaura" class="mt-3 rounded-[20px] lg:w-[50vw] w-[75vw]">
-  <a href="/" class="font-medium lg:text-2xl text-xl mt-3 underline text-rose-400 hover:text-rose-600">take me home</a>
-  <Kotori />
+  <a href="/" class="font-medium lg:text-2xl text-xl mt-3 underline text-ctp-pink hover:text-ctp-red">take me home</a>
 </Layout>
