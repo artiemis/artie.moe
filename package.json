@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "push": "pnpm build && wsl ./deploy.sh"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/svelte": "^2.1.0",
