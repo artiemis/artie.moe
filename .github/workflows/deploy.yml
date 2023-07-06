@@ -37,3 +37,4 @@ jobs:
           key: ${{ secrets.KEY }}
           source: "./dist/"
           target: "/home/artem/artie.moe/"
+          rm: true
