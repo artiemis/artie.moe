@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Ubuntu"', "sans-serif"],
+        sans: ["Ubuntu", "sans-serif"],
         mono: ['"JetBrains Mono"', "monospace"],
       },
     },
@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     require("@catppuccin/tailwindcss")({
       prefix: "ctp",
-      defaultFlavour: "mocha",
+      defaultFlavour: "macchiato",
     }),
   ],
 };
