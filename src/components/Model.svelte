@@ -49,9 +49,12 @@
         motionPreload: MotionPreloadStrategy.NONE,
       }
     );
-    app.stage.addChild(model as unknown as PIXI.DisplayObject);
 
-    canvas.style.cursor = "pointer";
+    app.stage.on("childAdded", () => {
+      canvas.style.opacity = "1";
+      canvas.style.cursor = "pointer";
+    });
+    app.stage.addChild(model as unknown as PIXI.DisplayObject);
 
     model.internalModel.motionManager.state.shouldRequestIdleMotion = () =>
       false;
@@ -78,5 +81,5 @@
   bind:this={canvas}
   on:pointerdown={() => model.motion("Tap")}
   id="live2d"
-  class="cursor-pointer left-0 bottom-0 fixed lg:w-96 w-44"
+  class="cursor-pointer left-0 bottom-0 fixed lg:w-96 w-44 opacity-0 transition-opacity"
 />
