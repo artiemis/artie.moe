@@ -1,14 +1,43 @@
 ---
 import Prompt from "../components/Prompt.astro";
 import Layout from "../layouts/Layout.astro";
-import ayuaura from "../assets/ayuaura.jpg"
+import notFound from "../assets/notFound.png";
 ---
 
 <Layout title="404">
   <Prompt />
-  <p class="font-bold lg:text-6xl text-4xl text-ctp-pink">
-    404
-  </p>
-  <img src={ayuaura.src} alt="ayuaura" class="mt-3 rounded-[20px] lg:w-[50vw] w-[75vw]">
-  <a href="/" class="font-medium lg:text-2xl text-xl mt-3 underline text-ctp-pink hover:text-ctp-red">take me home</a>
+  <img
+    draggable="false"
+    src={notFound.src}
+    alt="404 Not Found"
+    class="w-[50rem]"
+  />
+  <a
+    href="/"
+    class="home font-medium lg:text-2xl text-xl mt-3 underline text-ctp-pink hover:text-ctp-red"
+    >take me home</a
+  >
 </Layout>
+
+<script>
+  const anchor = document.querySelector("a");
+  anchor?.addEventListener("contextmenu", (e) => {
+    const img = document.querySelector<HTMLImageElement>("img");
+    if (!img) return;
+
+    e.preventDefault();
+
+    img.replaceWith(
+      // })
+      Object.assign(document.createElement("video"), {
+        src: "https://cdn.artie.moe/country-road.mp4",
+        poster: "https://pbs.twimg.com/media/FVI89ICUYAIicVt.jpg:large",
+        controls: true,
+        playsinline: true,
+      })
+    );
+
+    const video = document.querySelector("video");
+    video.classList.add("w-[50rem]", "max-w-full", "aspect-video");
+  });
+</script>
