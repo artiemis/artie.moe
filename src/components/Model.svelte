@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts">
   import * as PIXI from "pixi.js";
   import {
     Live2DModel,
@@ -6,10 +6,11 @@
     MotionPriority,
   } from "pixi-live2d-display";
   import { reZeroModels } from "../utils/constants";
-  import { onMounted, onUnmounted, ref, useTemplateRef } from "vue";
+  import { onDestroy, onMount } from "svelte";
 
-  const canvas = useTemplateRef<HTMLCanvasElement>("canvas");
-  const isLoaded = ref(false);
+  let canvas = $state<HTMLCanvasElement>();
+  let isLoaded = $state(false);
+  let opacity = $derived(isLoaded ? "opacity-1" : "opacity-0");
 
   let app: PIXI.Application;
   let model: Live2DModel;
@@ -35,10 +36,10 @@
     return choices[Math.floor(Math.random() * choices.length)];
   }
 
-  onMounted(async () => {
+  onMount(async () => {
     (window as any).PIXI = PIXI;
     app = new PIXI.Application({
-      view: canvas.value,
+      view: canvas,
       autoStart: true,
       backgroundAlpha: 0,
       width: 900,
@@ -53,7 +54,7 @@
     );
 
     app.stage.on("childAdded", () => {
-      isLoaded.value = true;
+      isLoaded = true;
     });
     app.stage.addChild(model as unknown as PIXI.DisplayObject);
 
@@ -73,13 +74,15 @@
     model.y = 0;
   });
 
-  onUnmounted(() => {
+  onDestroy(() => {
     app.destroy(false);
   });
 </script>
 
-<template>
-  <canvas ref="canvas" id="live2d" @pointerdown="model.motion('Tap')"
-    class="left-0 bottom-0 fixed lg:w-96 w-44 transition-opacity"
-    :class="[isLoaded ? 'opacity-1' : 'opacity-0', { '!cursor-pointer': isLoaded }]" />
-</template>
+<canvas
+  bind:this={canvas}
+  id="live2d"
+  onpointerdown={() => model.motion("Tap")}
+  class="left-0 bottom-0 fixed lg:w-96 w-44 transition-opacity {opacity}"
+  class:!cursor-pointer={isLoaded}
+></canvas>

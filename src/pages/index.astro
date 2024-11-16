@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Prompt from "../components/Prompt.astro";
 import Centerpiece from "../components/Centerpiece.astro";
 import Icons from "../components/Icons.astro";
-import Model from "../components/Model.vue";
+import Model from "../components/Model.svelte";
 ---
 
 <Layout title="artie">
@@ -13,5 +13,5 @@ import Model from "../components/Model.vue";
 
   <script is:inline src="/vendors/live2dcubismcore.min.js"></script>
   <script is:inline src="/vendors/live2d.min.js"></script>
-  <Model client:only="vue" />
+  <Model client:only="svelte" />
 </Layout>
