@@ -19,11 +19,12 @@
 
   let canvas = $state<HTMLCanvasElement>();
   let isLoaded = $state(false);
+  let holdTimeout = $state<number>();
 
   let audio = $state<HTMLAudioElement>();
   let volume = $state(50);
   let volumeLabel = $state<string>();
-  let volumeLabelTimeout = $state<ReturnType<typeof setTimeout>>();
+  let volumeLabelTimeout = $state<number>();
 
   let app: PIXI.Application;
   let model: Live2DModel;
@@ -75,7 +76,22 @@
     }
   }
 
-  function handleModelDoubleClick() {
+  function handleMouseDown() {
+    model.motion("Tap");
+
+    holdTimeout = window.setTimeout(() => {
+      if (holdTimeout) {
+        handleAudioInteraction();
+      }
+    }, 500);
+  }
+
+  function handleMouseUp() {
+    clearTimeout(holdTimeout);
+    holdTimeout = undefined;
+  }
+
+  function handleAudioInteraction() {
     if (!audio && isLoaded) {
       showVolumeLabel();
       audio = new Audio(audioSrc);
@@ -96,7 +112,10 @@
   function showVolumeLabel() {
     volumeLabel = `${volume}%`;
     clearTimeout(volumeLabelTimeout);
-    volumeLabelTimeout = setTimeout(() => (volumeLabel = undefined), 1000);
+    volumeLabelTimeout = window.setTimeout(
+      () => (volumeLabel = undefined),
+      1000
+    );
   }
 
   onMount(async () => {
@@ -168,9 +187,9 @@
   </div>
   <canvas
     bind:this={canvas}
-    ondblclick={handleModelDoubleClick}
+    onmousedown={handleMouseDown}
+    onmouseup={handleMouseUp}
     id="live2d"
-    onpointerdown={() => model.motion("Tap")}
     class="lg:w-96 w-44 transition-opacity {isLoaded
       ? 'opacity-1'
       : 'opacity-0'}"
