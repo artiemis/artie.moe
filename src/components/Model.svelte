@@ -7,13 +7,34 @@
   } from "pixi-live2d-display";
   import { reZeroModels } from "../utils/constants";
   import { onDestroy, onMount } from "svelte";
+  import { fade } from "svelte/transition";
+
+  const audioSrc = new URL(
+    "../assets/i-trust-you.m4a",
+    import.meta.url
+  ).toString();
+  const loudNormRatio = 100 / 40;
+  const modelName = getModelFromParams() || getRandomModelUrl();
+  const gap = modelName.includes("/ferris") ? "gap-6" : "gap-0";
 
   let canvas = $state<HTMLCanvasElement>();
   let isLoaded = $state(false);
-  let opacity = $derived(isLoaded ? "opacity-1" : "opacity-0");
+
+  let audio = $state<HTMLAudioElement>();
+  let volume = $state(50);
+  let volumeLabel = $state<string>();
+  let volumeLabelTimeout = $state<ReturnType<typeof setTimeout>>();
 
   let app: PIXI.Application;
   let model: Live2DModel;
+
+  $effect(() => {
+    if (audio) {
+      audio.volume = Math.round(volume / loudNormRatio) / 100;
+      volumeLabel = `${volume}%`;
+      localStorage.setItem("volume", volume.toString());
+    }
+  });
 
   function getModelFromParams(): string | undefined {
     if (location.search) {
@@ -36,6 +57,48 @@
     return choices[Math.floor(Math.random() * choices.length)];
   }
 
+  function handleKeyDown(e: KeyboardEvent) {
+    if (audio) {
+      switch (e.key) {
+        case "ArrowUp":
+          volume = Math.min(100, volume + 5);
+          showVolumeLabel();
+          break;
+        case "ArrowDown":
+          volume = Math.max(0, volume - 5);
+          showVolumeLabel();
+          break;
+        case " ":
+          audio.paused ? audio.play() : audio.pause();
+          break;
+      }
+    }
+  }
+
+  function handleModelDoubleClick() {
+    if (!audio && isLoaded) {
+      showVolumeLabel();
+      audio = new Audio(audioSrc);
+      audio.play();
+
+      audio.addEventListener(
+        "ended",
+        () => {
+          audio = undefined;
+        },
+        { once: true }
+      );
+    } else {
+      audio.paused ? audio.play() : audio.pause();
+    }
+  }
+
+  function showVolumeLabel() {
+    volumeLabel = `${volume}%`;
+    clearTimeout(volumeLabelTimeout);
+    volumeLabelTimeout = setTimeout(() => (volumeLabel = undefined), 1000);
+  }
+
   onMount(async () => {
     (window as any).PIXI = PIXI;
     app = new PIXI.Application({
@@ -46,12 +109,9 @@
       height: 980,
     });
 
-    model = await Live2DModel.from(
-      getModelFromParams() || getRandomModelUrl(),
-      {
-        motionPreload: MotionPreloadStrategy.NONE,
-      }
-    );
+    model = await Live2DModel.from(modelName, {
+      motionPreload: MotionPreloadStrategy.NONE,
+    });
 
     app.stage.on("childAdded", () => {
       isLoaded = true;
@@ -72,17 +132,48 @@
     model.scale.set(0.45);
     model.x = -600;
     model.y = 0;
+
+    if (localStorage.getItem("volume")) {
+      volume = +localStorage.getItem("volume");
+    }
   });
 
   onDestroy(() => {
     app.destroy(false);
+    if (audio) {
+      audio.pause();
+      audio.remove();
+    }
   });
 </script>
 
-<canvas
-  bind:this={canvas}
-  id="live2d"
-  onpointerdown={() => model.motion("Tap")}
-  class="left-0 bottom-0 fixed lg:w-96 w-44 transition-opacity {opacity}"
-  class:!cursor-pointer={isLoaded}
-></canvas>
+<svelte:window onkeydown={handleKeyDown} />
+
+<div class="grid fixed left-0 bottom-0 z-10 {gap}">
+  <div class="mx-auto">
+    {#if audio}
+      {#if volumeLabel}
+        <div transition:fade={{ duration: 100 }} class="text-purple-300">
+          {volumeLabel}
+        </div>
+      {/if}
+      <input
+        bind:value={volume}
+        oninput={showVolumeLabel}
+        transition:fade={{ duration: 100 }}
+        type="range"
+        class="lg:w-48 lg:h-2 w-32 h-2 rounded-xl appearance-none bg-purple-300 accent-purple-400 cursor-pointer"
+      />
+    {/if}
+  </div>
+  <canvas
+    bind:this={canvas}
+    ondblclick={handleModelDoubleClick}
+    id="live2d"
+    onpointerdown={() => model.motion("Tap")}
+    class="lg:w-96 w-44 transition-opacity {isLoaded
+      ? 'opacity-1'
+      : 'opacity-0'}"
+    class:!cursor-pointer={isLoaded}
+  ></canvas>
+</div>
