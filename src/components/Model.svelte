@@ -77,7 +77,6 @@
   }
 
   function handlePressDown() {
-    console.log("handlePressDown");
     model.motion("Tap");
 
     holdTimeout = window.setTimeout(() => {
@@ -88,7 +87,6 @@
   }
 
   function handlePressUp() {
-    console.log("handlePressUp");
     clearTimeout(holdTimeout);
     holdTimeout = undefined;
   }
@@ -168,24 +166,40 @@
   });
 </script>
 
+{#snippet player(mobile = false)}
+  {#snippet label()}
+    {#if volumeLabel}
+      <div transition:fade={{ duration: 100 }} class="text-purple-300">
+        {volumeLabel}
+      </div>
+    {/if}
+  {/snippet}
+  {#if audio}
+    {#if !mobile}
+      {@render label()}
+    {/if}
+    <input
+      bind:value={volume}
+      oninput={showVolumeLabel}
+      transition:fade={{ duration: 100 }}
+      type="range"
+      class="lg:w-48 lg:h-2 w-32 h-2 rounded-xl appearance-none bg-purple-300 accent-purple-400 cursor-pointer"
+    />
+    {#if mobile}
+      {@render label()}
+    {/if}
+  {/if}
+{/snippet}
+
 <svelte:window onkeydown={handleKeyDown} />
 
+<div class="lg:hidden fixed top-4 right-6 z-10">
+  {@render player(true)}
+</div>
+
 <div class="grid fixed left-0 bottom-0 z-10 {gap}">
-  <div class="mx-auto">
-    {#if audio}
-      {#if volumeLabel}
-        <div transition:fade={{ duration: 100 }} class="text-purple-300">
-          {volumeLabel}
-        </div>
-      {/if}
-      <input
-        bind:value={volume}
-        oninput={showVolumeLabel}
-        transition:fade={{ duration: 100 }}
-        type="range"
-        class="lg:w-48 lg:h-2 w-32 h-2 rounded-xl appearance-none bg-purple-300 accent-purple-400 cursor-pointer"
-      />
-    {/if}
+  <div class="mx-auto hidden lg:block">
+    {@render player()}
   </div>
   <canvas
     bind:this={canvas}
