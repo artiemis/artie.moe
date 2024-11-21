@@ -76,7 +76,8 @@
     }
   }
 
-  function handleMouseDown() {
+  function handlePressDown() {
+    console.log("handlePressDown");
     model.motion("Tap");
 
     holdTimeout = window.setTimeout(() => {
@@ -86,7 +87,8 @@
     }, 500);
   }
 
-  function handleMouseUp() {
+  function handlePressUp() {
+    console.log("handlePressUp");
     clearTimeout(holdTimeout);
     holdTimeout = undefined;
   }
@@ -187,8 +189,10 @@
   </div>
   <canvas
     bind:this={canvas}
-    onmousedown={handleMouseDown}
-    onmouseup={handleMouseUp}
+    onmousedown={handlePressDown}
+    onmouseup={handlePressUp}
+    ontouchstart={handlePressDown}
+    ontouchend={handlePressUp}
     id="live2d"
     class="lg:w-96 w-44 transition-opacity {isLoaded
       ? 'opacity-1'
