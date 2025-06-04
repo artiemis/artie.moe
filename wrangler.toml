@@ -1,0 +1,6 @@
+name = "artie-moe"
+compatibility_date = "2025-06-04"
+
+[assets]
+directory = "./dist/"
+not_found_handling = "404-page"
