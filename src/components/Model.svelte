@@ -9,13 +9,14 @@
   import { onDestroy, onMount } from "svelte";
   import { fade } from "svelte/transition";
 
-  const audioSrc = new URL(
+  const audioUrl = new URL(
     "../assets/i-trust-you.m4a",
-    import.meta.url
+    import.meta.url,
   ).toString();
   const loudNormRatio = 100 / 40;
   const modelName = getModelFromParams() || getRandomModelUrl();
-  const gap = modelName.includes("/ferris") ? "gap-6" : "gap-0";
+  const isFerris = modelName.includes("/ferris");
+  const gap = isFerris ? "gap-6" : "gap-0";
 
   let canvas = $state<HTMLCanvasElement>();
   let isLoaded = $state(false);
@@ -78,6 +79,7 @@
 
   function handlePressDown() {
     model.motion("Tap");
+    if (isFerris) return;
 
     holdTimeout = window.setTimeout(() => {
       if (holdTimeout) {
@@ -94,7 +96,7 @@
   function handleAudioInteraction() {
     if (!audio && isLoaded) {
       showVolumeLabel();
-      audio = new Audio(audioSrc);
+      audio = new Audio(audioUrl);
       audio.play();
 
       audio.addEventListener(
@@ -102,7 +104,7 @@
         () => {
           audio = undefined;
         },
-        { once: true }
+        { once: true },
       );
     } else {
       audio.paused ? audio.play() : audio.pause();
@@ -114,7 +116,7 @@
     clearTimeout(volumeLabelTimeout);
     volumeLabelTimeout = window.setTimeout(
       () => (volumeLabel = undefined),
-      1000
+      1000,
     );
   }
 
@@ -142,7 +144,7 @@
     model.internalModel.motionManager.on("motionFinish", () => {
       setTimeout(
         () => model.motion("Idle", undefined, MotionPriority.IDLE),
-        2000
+        2000,
       );
     });
 

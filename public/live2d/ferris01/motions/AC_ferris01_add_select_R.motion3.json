@@ -1,0 +1,147 @@
+{
+  "Version": 3,
+  "Meta": {
+    "Duration": 2.0,
+    "Fps": 30.0,
+    "Loop": true,
+    "AreBeziersRestricted": true,
+    "CurveCount": 7,
+    "TotalSegmentCount": 16,
+    "TotalPointCount": 28,
+    "UserDataCount": 1,
+    "TotalUserDataSize": 0
+  },
+  "Curves": [
+    {
+      "Target": "Parameter",
+      "Id": "ParamAngleX",
+      "Segments": [
+        0,
+        -27.204,
+        1,
+        0.1,
+        -27.019,
+        0.2,
+        -27,
+        0.3,
+        -27,
+        0,
+        1.267,
+        -28,
+        1,
+        1.511,
+        -28,
+        1.756,
+        -27.656,
+        2,
+        -27.204
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamAngleY",
+      "Segments": [
+        0,
+        -2.33,
+        1,
+        0.089,
+        -2.007,
+        0.178,
+        -2,
+        0.267,
+        -2,
+        0,
+        1.233,
+        -4,
+        1,
+        1.489,
+        -4,
+        1.744,
+        -3.261,
+        2,
+        -2.33
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamAngleZ",
+      "Segments": [
+        0,
+        -0.293,
+        1,
+        0.067,
+        0.057,
+        0.133,
+        0,
+        0.2,
+        0,
+        0,
+        1.167,
+        -3,
+        1,
+        1.445,
+        -3,
+        1.722,
+        -1.752,
+        2,
+        -0.293
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamBodyAngleX",
+      "Segments": [
+        0,
+        -9,
+        0,
+        1,
+        -8,
+        0,
+        2,
+        -9
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamBodyAngleY",
+      "Segments": [
+        0,
+        0,
+        0,
+        0.967,
+        -1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamEyeBallX",
+      "Segments": [
+        0,
+        0.8,
+        0,
+        2,
+        0.8
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamBodyAngleZ",
+      "Segments": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ]
+    }
+  ],
+  "UserData": [
+    {
+      "Time": 0.0,
+      "Value": ""
+    }
+  ]
+}

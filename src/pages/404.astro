@@ -15,29 +15,6 @@ import notFound from "../assets/notFound.png";
   <a
     href="/"
     class="home font-medium lg:text-2xl text-xl mt-3 underline text-ctp-pink hover:text-ctp-red"
-    >take me home</a
+    >home</a
   >
 </Layout>
-
-<script>
-  const anchor = document.querySelector("a");
-  anchor?.addEventListener("contextmenu", (e) => {
-    const img = document.querySelector<HTMLImageElement>("img");
-    if (!img) return;
-
-    e.preventDefault();
-
-    img.replaceWith(
-      // })
-      Object.assign(document.createElement("video"), {
-        src: "https://cdn.artie.moe/country-road.mp4",
-        poster: "https://pbs.twimg.com/media/FVI89ICUYAIicVt.jpg:large",
-        controls: true,
-        playsinline: true,
-      })
-    );
-
-    const video = document.querySelector("video");
-    video.classList.add("w-[50rem]", "max-w-full", "aspect-video");
-  });
-</script>

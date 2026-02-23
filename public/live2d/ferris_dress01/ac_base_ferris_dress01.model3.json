@@ -1,0 +1,172 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "ac_base_ferris_dress01.moc3",
+    "Textures": [
+      "textures/texture_00.png"
+    ],
+    "Physics": "ac_base_ferris_dress01.physics3.json",
+    "Expressions": [],
+    "Motions": {
+      "Tap": [
+        {
+          "File": "motions/AC_ferris_dress01_act_bikkuri_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_egao_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_ikaru_w.motion3.json"
+        }
+      ],
+      "Idle": [
+        {
+          "File": "motions/AC_ferris_dress01_act_bikkuri.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_bikkuri_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_egao.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_egao_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_hohoemu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_ikaru.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_ikaru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_itazura01.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_itazura01_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_itazura02.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_itazura02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_nayamu.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_nayamu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_normal_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_odoroku_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_tameiki.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_act_unazuku.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_add_select_C.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_add_select_L.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_add_select_R.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_bikkuri.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_bikkuri_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_cheek_off.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_cheek_on.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_egao.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_egao_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_egao02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_hohoemu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_ikaru.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_ikaru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_itazura01.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_itazura01_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_itazura02.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_itazura02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_nayamu.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_nayamu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_normal_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_odoroku_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_shinken_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_talk_large.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_talk_normal.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_talk_off.motion3.json"
+        },
+        {
+          "File": "motions/AC_ferris_dress01_face_talk_small.motion3.json"
+        }
+      ]
+    }
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": [
+        "ParamEyeLOpen",
+        "ParamEyeROpen"
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": [
+        "ParamMouthOpenY"
+      ]
+    }
+  ]
+}

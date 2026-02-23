@@ -1,0 +1,383 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "ac_base_emilia_dress01.moc3",
+    "Textures": [
+      "textures/texture_00.png"
+    ],
+    "Physics": null,
+    "Expressions": [],
+    "Motions": {
+      "Tap": [
+        {
+          "File": "motions/AC_emilia_dress01_act_bikkuri_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_bikkuri02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_suneru.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_egao_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_ikaru02.motion3.json"
+        }
+      ],
+      "Idle": [
+        {
+          "File": "motions/AC_emilia_dress01_act_bikkuri.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_bikkuri_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_bikkuri02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_bikkuri02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_doya.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_doya_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_egao.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_egao_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_egao02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_egao02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_egao03.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_egao03_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_hohoemu.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_hohoemu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_hohoemu02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_hohoemu02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_hohoemu03.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_hohoemu03_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_hohoemu04.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_hohoemu04_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_ikaru.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_ikaru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_kanashimu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_kangaeru.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_kangaeru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_nayamu.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_nayamu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_normal_soft_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_normal_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_normal02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_normal03.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_normal03_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_odoroku.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_odoroku_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_odoroku02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_odoroku02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_punpun.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_punpun_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_punpun02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_punpun02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_shinken_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_shinken02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_shinken02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_suneru.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_suneru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_tameiki.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_tameiki02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_unazuku.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_unazuku02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_uru.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_uru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_uru02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_act_uru02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_add_select_C.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_add_select_C_bikkuri02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_add_select_C_egao.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_add_select_L.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_add_select_L_bikkuri02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_add_select_L_egao.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_add_select_R.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_add_select_R_bikkuri02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_add_select_R_egao.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_bikkuri.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_bikkuri_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_bikkuri02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_bikkuri02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_cheek_off.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_cheek_on.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_doya.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_doya_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_egao.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_egao_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_egao02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_egao02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_hohoemu.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_hohoemu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_hohoemu02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_hohoemu02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_hohoemu03.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_hohoemu03_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_ikaru.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_ikaru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_ikaru02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_ikaru03.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_kanashimu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_kangaeru.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_kangaeru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_nayamu.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_nayamu_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_normal_soft_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_normal_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_normal02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_odoroku.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_odoroku_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_odoroku02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_odoroku02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_punpun.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_punpun_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_punpun02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_punpun02_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_shinken_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_suneru.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_suneru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_talk_large.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_talk_normal.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_talk_off.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_talk_small.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_uru.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_uru_w.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_uru02.motion3.json"
+        },
+        {
+          "File": "motions/AC_emilia_dress01_face_uru02_w.motion3.json"
+        }
+      ]
+    }
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": [
+        "ParamEyeLOpen",
+        "ParamEyeROpen"
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": [
+        "ParamMouthOpenY",
+        "ParamMouthForm"
+      ]
+    }
+  ]
+}
