@@ -1,28 +1,29 @@
 ---
-import maomao from "../assets/maomao.webp";
+import coco from "../assets/coco.png";
 ---
 
-<div class="text-center">
+<div class="text-center relative group/card">
   <h1
-    class="group text-ctp-green font-semibold lg:text-5xl text-4xl hover:scale-110 transition duration-50"
+    class="group text-ctp-teal font-semibold lg:text-5xl text-4xl hover:scale-110 transition duration-50"
   >
-    hiya, I'm <span class="text-ctp-teal relative"
+    hiya, I'm <span class="text-coco relative"
       >artie<span
         class="absolute lg:bottom-[3.25rem] bottom-10 z-50 lg:text-xl text-lg lg:left-7 left-4 text-ctp-lavender opacity-0 group-hover:opacity-80 hover:opacity-50 transition duration-50"
         >/ˈarti/</span
       ></span
     >
     {" "}
-    <img
-      class="align-top mt-[-4px] rounded-b-md lg:w-12 w-10 inline-block pointer-events-none select-none"
-      src={maomao.src}
-    />
   </h1>
   <p
     class="lg:text-2xl text-xl lg:mt-4 mt-2 hover:scale-110 transition duration-50"
   >
-    a self-taught code archmage
+    tracing glyphs in code and 言葉
   </p>
+  <img
+    class="absolute top-0 right-[-65px] lg:top-[-12px] lg:right-[-90px] rounded-b-md lg:w-20 w-14 select-none group-hover/card:translate-x-3 hover:!translate-x-0 hover:scale-110 transition duration-50"
+    src={coco.src}
+    draggable="false"
+  />
 </div>
 
 <style>
